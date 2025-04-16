@@ -14,11 +14,13 @@
             color: #111;
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
+	    scroll-behavior: smooth;
         }
 
         section, main {
             scroll-snap-align: start;
-            height: 100vh;
+            min-height: 90vh;
+	    overflow: hidden;
         }
 
         header {
@@ -122,7 +124,8 @@
 
         /* À propos */
         .about-me-wrapper {
-            padding: 100px 40px 40px;
+            padding: 100px 40px 0px;
+	    background-color: #ffffff; /* fond blanc pur */
         }
 
         .about-me-title {
@@ -285,6 +288,7 @@
 .projet-btn {
     margin-bottom: 15px; /* Espace entre le bouton et le bas */
 }
+
     </style>
 </head>
 <body>
@@ -296,8 +300,9 @@
         <a href="#a-propos">À PROPOS</a>
         <a href="#competences">COMPÉTENCES</a>
         <a href="#projets">PROJETS</a>
-        <a href="#">CONTACT</a>
+        <a href="#contact">CONTACT</a>
     </nav>
+
 </header>
 
 <main id="accueil">
@@ -308,8 +313,8 @@
         les entreprises dans leur transformation digitale et leur stratégie e-commerce.
     </p>
     <div>
-        <a href="#" class="btn btn-primary">Voir mes projets</a>
-        <a href="#" class="btn btn-secondary">Me contacter</a>
+        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-secondary">Me contacter</a>
     </div>
 </main>
 
@@ -317,7 +322,7 @@
     <h1 class="about-me-title"><span class="highlight">À propos de moi</span></h1>
     <div class="about-me">
         <div style="position: relative;">
-            <img src="images/haesi-shop-logo.png" alt="Photo de Haesi" class="profile-image">
+            <img src="images/Avatar Haesi.png" alt="Photo de Haesi" class="profile-image">
             <div class="experience-block">2+ <br>années d’expérience</div>
         </div>
         <div>
@@ -372,20 +377,125 @@
 </section>
 
 <section class="projets-section" id="projets">
-    <h1><span class="highlight">Mes réalisations</span></h1>
-    <div class="projets-container">
-        <div class="projet-card">
-    <img src="C:\Users\aydk2\Downloads\Capture d’écran 2025-04-15 à 21.14.16.png" alt="Logo Haesi Shop" class="projet-image-circle">
-    <h3>Haesi Shop</h3>
-    <p>
-        Première boutique e-commerce personnelle dédiée à la vente de colliers en soutien à la Palestine, entièrement développée sur mesure, du design à la mise en ligne.
-    </p>
-    <a href="https://haesi.shop" target="_blank" class="btn btn-primary projet-btn">Visiter la boutique</a>
-</div>
-       
+  <h1><span class="highlight">Mes réalisations</span></h1>
+  <div class="projets-container" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+
+    <!-- Carte Haesi Shop -->
+    <div class="projet-card" style="text-align: center; padding: 30px; width: 320px; min-height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <img src="images/Logo Haesi Shop .png" alt="Logo Haesi Shop" class="projet-image-circle">
+        <h3 style="margin-top: 20px; color: #6a9fff;">Haesi Shop</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #333;">
+    Première boutique e-commerce personnelle dédiée à la vente de colliers en soutien à la Palestine, entièrement développée sur mesure, du design à la mise en ligne.
+</p>
+<p style="font-size: 15px; line-height: 1.6; color: #333; margin-top: 10px;">
+    Chaque création est pensée avec passion pour transmettre un message fort de solidarité, de culture et d’engagement.
+</p>
+      </div>
+      <a href="https://haesi.shop" target="_blank" class="btn btn-primary projet-btn" style="margin: 20px auto 0;">Visiter la boutique</a>
     </div>
+
+    <!-- Carte Collier -->
+    <div class="projet-card" style="text-align: center; padding: 30px; width: 320px; min-height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <img src="images/01.jpg" alt="Collier Free Palestine" class="projet-image-circle" style="margin-bottom: 15px;">
+        <h3 style="color: #000000;">Collier Duo<br> Jérusalem & Cœur Rose<br> | Free Palestine</h3>
+	<br>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 20px 0;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="color:#6a9fff; font-size: 16px;">✔️</span>
+            <span style="font-size: 14.5px;">Acier inoxydable, résistant à l’eau</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-leaf" style="color:#50b888;"></i>
+            <span style="font-size: 14.5px;">Hypoallergénique,adapté aux peaux sensibles</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-star" style="color:#ffc107;"></i>
+            <span style="font-size: 14.5px;">Finition brillante, sans ternissement</span>
+          </div>
+        </div>
+
+        <p style="margin-top: 10px;">
+          <strong>Prix :</strong> <del>54,99 €</del> <span style="color:#6a9fff;">45,99 €</span>
+        </p>
+      </div>
+
+      <a href="https://haesi.shop/products/collier-duo-edition-carte-de-jerusalem-coeur-rose-free-palestine"
+         target="_blank" class="btn btn-secondary projet-btn" style="margin: 20px auto 0;">
+         Acheter maintenant
+      </a>
+    </div>
+
+  </div>
+<style>
+  .btn-envoyer {
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    background: linear-gradient(to right, #6a9fff, #9dc7ff);
+    color: white;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-envoyer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(106, 159, 255, 0.2);
+  }
+</style>
+
+<section id="contact" style="background-color: #ffffff; padding: 100px 40px;">
+  <h1 style="text-align: center; font-size: 50px; margin-bottom: 60px;">
+    <span class="highlight">Me contacter</span>
+  </h1>
+  <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+    <!-- Colonne gauche -->
+    <div style="flex: 1; min-width: 280px; max-width: 500px; text-align: left;">
+      <h2 style="font-size: 22px; font-weight: bold; margin-bottom: 20px;">Discutons de vos projets</h2>
+      <p style="margin-bottom: 10px; line-height: 1.7;">
+        Une idée, un projet, une collaboration ? Écris-moi directement <br>via ce formulaire.
+      </p>
+      <p style="margin-bottom: 30px;">Je réponds rapidement !</p>
+
+      <!-- Email -->
+      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+        <div style="background-color: #e2ebff; padding: 10px; border-radius: 12px; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center;">
+          <i class="fas fa-envelope" style="color: #6a9fff; font-size: 16px;"></i>
+        </div>
+        <span style="font-size: 16px;">haesilab@gmail.com</span>
+      </div>
+
+      <!-- Missions -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div style="background-color: #e2ebff; padding: 10px; border-radius: 12px; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center;">
+          <i class="fas fa-user-check" style="color: #6a9fff; font-size: 16px;"></i>
+        </div>
+        <span style="font-size: 16px;">Disponible pour des missions</span>
+      </div>
+    </div>
+
+    <!-- Colonne droite : Formulaire -->
+    <form action="mailto:haesilab@gmail.com" method="post" enctype="text/plain"
+          style="flex: 1; min-width: 300px; max-width: 500px; display: flex; flex-direction: column; gap: 20px;">
+      <input type="text" name="Nom" placeholder="Nom" required
+             style="padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px;">
+      <input type="email" name="Email" placeholder="Email" required
+             style="padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px;">
+      <textarea name="Message" placeholder="Votre message" rows="6" required
+                style="padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px;"></textarea>
+      <button type="submit" class="btn-envoyer">
+        Envoyer <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+      </button>
+    </form>
+
+  </div>
 </section>
+
 
 </body>
 </html>
-
