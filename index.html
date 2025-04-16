@@ -288,6 +288,125 @@
 .projet-btn {
     margin-bottom: 15px; /* Espace entre le bouton et le bas */
 }
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .experience-block {
+        bottom: -10px;
+        left: -20px;
+    }
+
+    .competences-container {
+        gap: 20px;
+    }
+
+    .competence-card {
+        max-width: 100%;
+    }
+
+    .projets-container {
+        gap: 30px;
+    }
+
+    .projet-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .desc {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .about-me-wrapper {
+        padding: 60px 20px;
+    }
+
+    .about-me-title {
+        font-size: 36px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .competences-section {
+        padding: 60px 20px;
+    }
+
+    .competence-card {
+        flex: 1 1 100%;
+    }
+
+    .projets-section {
+        padding: 60px 20px;
+    }
+
+    .projet-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    #contact {
+        padding: 60px 20px;
+    }
+
+    #contact h1 {
+        font-size: 36px;
+    }
+
+    #contact form, #contact > div > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #contact .btn-envoyer {
+        width: 100%;
+    }
+}
+
 
     </style>
 </head>
@@ -497,3 +616,4 @@
 </section>
 </body>
 </html>
+
